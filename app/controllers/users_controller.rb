@@ -28,6 +28,7 @@ class UsersController < ApplicationController
                else
                  Response.new(205, 'Error')
                end
+    status 201
     response.to_json
   end
 

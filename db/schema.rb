@@ -13,36 +13,36 @@
 
 ActiveRecord::Schema.define(version: 20201121114249) do
 
-  create_table 'events', force: :cascade do |t|
-    t.string   'title'
-    t.datetime 'start'
-    t.datetime 'end'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
-    t.integer  'type_id'
+  create_table "events", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "start"
+    t.datetime "end"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "type_id"
   end
 
-  create_table 'types', force: :cascade do |t|
-    t.string   'name'
-    t.string   'description'
-    t.datetime 'created_at',  null: false
-    t.datetime 'updated_at',  null: false
+  create_table "types", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
-  create_table 'user_events', force: :cascade do |t|
-    t.integer  'user_id'
-    t.integer  'event_id'
-    t.datetime 'created_at', null: false
-    t.datetime 'updated_at', null: false
+  create_table "user_events", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table 'users', force: :cascade do |t|
-    t.string   'name'
-    t.string   'email'
-    t.string   'password_digest'
-    t.string   'phone'
-    t.datetime 'created_at',      null: false
-    t.datetime 'updated_at',      null: false
+  create_table "users", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "phone"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
